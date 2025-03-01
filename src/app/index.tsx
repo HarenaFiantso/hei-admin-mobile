@@ -1,9 +1,9 @@
-import * as Styled from '@/styles/home.style';
+import { Redirect } from 'expo-router';
 
-export default function Home() {
-  return (
-    <Styled.Container>
-      <Styled.Title>Hello, HEI Admin</Styled.Title>
-    </Styled.Container>
-  );
+export default function Index() {
+  const isSignedIn = false;
+
+  if (isSignedIn) return <Redirect href="/(root)/home" />;
+
+  return <Redirect href="/(auth)/welcome" />;
 }
