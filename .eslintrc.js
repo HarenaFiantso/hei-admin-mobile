@@ -6,4 +6,4 @@ module.exports = {
     'import/namespace': 0,
     'no-duplicate-imports': 'error',
   },
-}
+};
