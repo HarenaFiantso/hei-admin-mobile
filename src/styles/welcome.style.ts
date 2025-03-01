@@ -1,4 +1,5 @@
-import { Animated, ImageBackground } from 'react-native';
+import { ImageBackground } from 'react-native';
+import LinearGradient from 'react-native-linear-gradient';
 import styled from 'styled-components/native';
 
 export const Container = styled.View`
@@ -11,11 +12,12 @@ export const BannerBackground = styled(ImageBackground)`
   height: 100%;
 `;
 
-export const Overlay = styled.View`
+export const Overlay = styled(LinearGradient).attrs({
+  colors: ['rgba(0, 21, 56, 0.4)', 'rgba(0, 21, 56, 0.95)'],
+})`
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: linear-gradient(rgba(0, 21, 56, 0.7) rgba(0, 21, 56, 0.9));
 `;
 
 export const Content = styled.View`
@@ -45,7 +47,6 @@ export const WelcomeDescription = styled.Text`
   color: white;
   text-align: center;
   margin-top: 30px;
-  font-size: 16px;
 `;
 
 export const LoginButton = styled.TouchableOpacity`
