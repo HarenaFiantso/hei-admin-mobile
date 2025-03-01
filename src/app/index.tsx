@@ -1,5 +1,9 @@
-import { Text } from 'react-native'
+import * as Styled from '@/styles/home.style';
 
 export default function Home() {
-  return <Text>Hello, HEI Admin</Text>
+  return (
+    <Styled.Container>
+      <Styled.Title>Hello, HEI Admin</Styled.Title>
+    </Styled.Container>
+  );
 }
