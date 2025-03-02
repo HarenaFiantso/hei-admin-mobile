@@ -1,9 +1,9 @@
 import { palette } from '@/theme/haPalette';
-import { ImageBackground } from 'react-native';
+import { Image, ImageBackground, Text, View } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import styled from 'styled-components/native';
 
-export const Container = styled.View`
+export const Container = styled(View)`
   flex: 1;
 `;
 
@@ -21,7 +21,7 @@ export const Overlay = styled(LinearGradient).attrs({
   height: 100%;
 `;
 
-export const Content = styled.View`
+export const Content = styled(View)`
   align-items: center;
   justify-content: center;
   flex: 0.5;
@@ -29,22 +29,22 @@ export const Content = styled.View`
   padding-inline: 20px;
 `;
 
-export const Logo = styled.Image`
+export const Logo = styled(Image)`
   width: 130px;
   height: 84px;
 `;
 
-export const TitleContainer = styled.Text`
+export const TitleContainer = styled(Text)`
   text-align: center;
   color: ${palette.white};
   margin-top: 20px;
 `;
 
-export const WelcomeTitle = styled.Text`
+export const WelcomeTitle = styled(Text)`
   font-size: 30px;
 `;
 
-export const WelcomeDescription = styled.Text`
+export const WelcomeDescription = styled(Text)`
   color: ${palette.white};
   text-align: center;
   margin-top: 30px;

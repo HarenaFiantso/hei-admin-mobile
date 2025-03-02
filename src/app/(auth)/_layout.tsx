@@ -23,7 +23,7 @@ export default function AuthLayout() {
   }
 
   return (
-    <Stack>
+    <Stack screenOptions={{ animation: 'slide_from_right' }}>
       <Stack.Screen name="welcome" options={{ headerShown: false }} />
       <Stack.Screen name="sign-in" options={{ headerShown: false }} />
     </Stack>
