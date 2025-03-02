@@ -1,3 +1,4 @@
+import { Button } from '@/components';
 import * as Styled from '@/styles/welcome.style';
 import { StatusBar } from 'expo-status-bar';
 import { ScrollView } from 'react-native';
@@ -21,11 +22,7 @@ export default function Welcome() {
               Plateforme conçue pour les étudiants de la {'\n'} Haute École d'Informatique - HEI
               Madagascar
             </Styled.WelcomeDescription>
-            <Styled.LoginButton>
-              <Styled.LoginButtonText style={{ fontFamily: 'Poppins-SemiBold' }}>
-                Connexion
-              </Styled.LoginButtonText>
-            </Styled.LoginButton>
+            <Button text="Connexion" style={{ width: '100%', marginTop: 40 }} />
           </Styled.Content>
         </ScrollView>
       </Styled.BannerBackground>
