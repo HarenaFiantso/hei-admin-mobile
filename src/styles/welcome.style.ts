@@ -1,3 +1,4 @@
+import { palette } from '@/theme/haPalette';
 import { ImageBackground } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import styled from 'styled-components/native';
@@ -13,7 +14,7 @@ export const BannerBackground = styled(ImageBackground)`
 `;
 
 export const Overlay = styled(LinearGradient).attrs({
-  colors: ['rgba(0, 21, 56, 0.4)', 'rgba(0, 21, 56, 0.95)'],
+  colors: ['rgba(0, 21, 56, 0.5)', 'rgba(0, 21, 56, 1)'],
 })`
   position: absolute;
   width: 100%;
@@ -35,7 +36,7 @@ export const Logo = styled.Image`
 
 export const TitleContainer = styled.Text`
   text-align: center;
-  color: white;
+  color: ${palette.white};
   margin-top: 20px;
 `;
 
@@ -44,22 +45,7 @@ export const WelcomeTitle = styled.Text`
 `;
 
 export const WelcomeDescription = styled.Text`
-  color: white;
+  color: ${palette.white};
   text-align: center;
   margin-top: 30px;
-`;
-
-export const LoginButton = styled.TouchableOpacity`
-  background-color: #dfa408;
-  border-radius: 20px;
-  min-height: 60px;
-  justify-content: center;
-  align-items: center;
-  margin-top: 40px;
-  width: 100%;
-`;
-
-export const LoginButtonText = styled.Text`
-  color: white;
-  font-size: 16px;
 `;
