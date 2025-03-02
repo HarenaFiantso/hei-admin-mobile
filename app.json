@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "hei-admin-mobile",
+    "name": "HEI Admin",
     "slug": "hei-admin-mobile",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -15,7 +15,7 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "backgroundColor": "#001538"
       },
       "package": "com.fiantsoravoajanahary.heiadminmobile"
     },
@@ -32,7 +32,7 @@
           "image": "./assets/images/splash-icon.png",
           "imageWidth": 200,
           "resizeMode": "contain",
-          "backgroundColor": "#ffffff"
+          "backgroundColor": "#001538"
         }
       ],
       "expo-font"
