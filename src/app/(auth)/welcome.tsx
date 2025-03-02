@@ -1,18 +1,17 @@
 import { Button } from '@/components';
 import * as Styled from '@/styles/welcome.style';
+import { useRouter } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import { ScrollView } from 'react-native';
 
 export default function Welcome() {
+  const router = useRouter();
+
   return (
     <Styled.Container>
       <Styled.BannerBackground source={require('assets/images/banner.jpg')}>
         <Styled.Overlay />
-        <ScrollView
-          contentContainerStyle={{
-            flexGrow: 1,
-          }}
-        >
+        <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
           <Styled.Content>
             <Styled.Logo source={require('assets/images/hei-logo.png')} resizeMode="contain" />
             <Styled.TitleContainer style={{ fontFamily: 'Poppins-Bold' }}>
@@ -22,7 +21,11 @@ export default function Welcome() {
               Plateforme conçue pour les étudiants de la {'\n'} Haute École d'Informatique - HEI
               Madagascar
             </Styled.WelcomeDescription>
-            <Button text="Connexion" style={{ width: '100%', marginTop: 40 }} />
+            <Button
+              text="Connexion"
+              style={{ width: '100%', marginTop: 40 }}
+              onPress={() => router.push('/sign-in')}
+            />
           </Styled.Content>
         </ScrollView>
       </Styled.BannerBackground>
