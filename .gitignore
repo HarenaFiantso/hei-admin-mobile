@@ -24,7 +24,6 @@ ios/.xcode.env.local
 
 # Android/IntelliJ
 #
-build/
 .idea
 .gradle
 local.properties
@@ -69,8 +68,6 @@ buck-out/
 # Expo
 .expo/
 bin/Exponent.app
-/android
-/ios
 expo-env.d.ts
 
 ## Secrets
