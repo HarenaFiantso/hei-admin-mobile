@@ -1,11 +1,8 @@
-import { Button } from '@/components';
+import { Button, FormField } from '@/components';
 import * as Styled from '@/styles/sign-in.style';
-import { useState } from 'react';
 import { ScrollView } from 'react-native';
 
 export default function SignIn() {
-  const [isFocused, setIsFocused] = useState(false);
-
   return (
     <Styled.ScreenContainer>
       <ScrollView>
@@ -16,20 +13,8 @@ export default function SignIn() {
             Veuillez remplir le formulaire ci-après pour se connecter à votre compte
           </Styled.SubTitle>
           <Styled.FormWrapper>
-            <Styled.FormInput
-              placeholder="Email"
-              placeholderTextColor="#b4b4b4"
-              textColor={isFocused ? 'white' : 'black'}
-              onFocus={() => setIsFocused(true)}
-              onBlur={() => setIsFocused(false)}
-            />
-            <Styled.FormInput
-              placeholder="Mot de passe"
-              placeholderTextColor="#b4b4b4"
-              textColor={isFocused ? 'white' : 'black'}
-              onFocus={() => setIsFocused(true)}
-              onBlur={() => setIsFocused(false)}
-            />
+            <FormField value="" placeholder="Email" labelStyle={{ color: 'white' }} />
+            <FormField value="" placeholder="Mot de passe" labelStyle={{ color: 'white' }} />
             <Styled.ForgotPasswordText>Mot de passe oublié?</Styled.ForgotPasswordText>
           </Styled.FormWrapper>
           <Button text="Connexion" style={{ width: '90%', marginTop: 40 }} />
