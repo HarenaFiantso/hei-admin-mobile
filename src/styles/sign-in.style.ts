@@ -1,5 +1,5 @@
 import { palette } from '@/theme/haPalette';
-import { Image, Text, TextInput, View } from 'react-native';
+import { Image, Text, View } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import styled from 'styled-components/native';
 
@@ -39,14 +39,6 @@ export const FormWrapper = styled(View)`
   margin-top: 50px;
   width: 90%;
   gap: 10px;
-`;
-
-export const FormInput = styled(TextInput)`
-  border-radius: 24px;
-  height: 64px;
-  background-color: rgba(0, 0, 0, 0.25);
-  padding: 20px;
-  color: ${({ textColor }: { textColor: string }) => textColor};
 `;
 
 export const ForgotPasswordText = styled(Text)`

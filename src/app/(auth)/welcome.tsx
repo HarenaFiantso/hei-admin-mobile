@@ -22,7 +22,7 @@ export default function Welcome() {
               Madagascar
             </Styled.WelcomeDescription>
             <Button
-              text="Connexion"
+              text="Se connecter"
               style={{ width: '100%', marginTop: 40 }}
               onPress={() => router.push('/sign-in')}
             />
